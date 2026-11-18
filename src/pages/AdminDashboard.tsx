@@ -124,7 +124,7 @@ export default function AdminDashboard() {
     XLSX.utils.book_append_sheet(wb, feesSheet, 'Fees');
 
     const stamp = new Date().toISOString().split('T')[0];
-    XLSX.writeFile(wb, `pumwani-records-${stamp}.xlsx`);
+    XLSX.writeFile(wb, `mavuko-records-${stamp}.xlsx`);
     toast.success('Excel file downloaded');
   };
 

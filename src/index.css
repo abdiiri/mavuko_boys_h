@@ -6,27 +6,27 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 222 47% 11%;
+    --background: 150 14% 97%;
+    --foreground: 160 24% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 160 24% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 160 24% 12%;
 
-    --primary: 217 91% 60%;
+    --primary: 153 56% 32%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 91% 72%;
+    --primary-glow: 151 45% 43%;
 
-    --secondary: 215 20% 93%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 150 12% 92%;
+    --secondary-foreground: 160 24% 12%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 150 12% 94%;
+    --muted-foreground: 155 8% 43%;
 
-    --accent: 217 91% 96%;
-    --accent-foreground: 217 91% 40%;
+    --accent: 150 35% 92%;
+    --accent-foreground: 153 56% 27%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
@@ -40,23 +40,23 @@
     --info: 199 89% 48%;
     --info-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --border: 150 10% 87%;
+    --input: 150 10% 87%;
+    --ring: 153 56% 32%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 222 47% 11%;
-    --sidebar-foreground: 213 31% 91%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-background: 158 28% 13%;
+    --sidebar-foreground: 150 20% 94%;
+    --sidebar-primary: 151 45% 43%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 217 91% 60%;
-    --sidebar-muted: 215 20% 65%;
+    --sidebar-accent: 157 23% 22%;
+    --sidebar-accent-foreground: 150 20% 96%;
+    --sidebar-border: 157 18% 23%;
+    --sidebar-ring: 151 45% 43%;
+    --sidebar-muted: 150 10% 69%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 72%));
+    --gradient-primary: linear-gradient(135deg, hsl(153 56% 32%), hsl(151 45% 43%));
     --gradient-success: linear-gradient(135deg, hsl(160 84% 39%), hsl(160 84% 50%));
     --gradient-warning: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 62%));
     --gradient-destructive: linear-gradient(135deg, hsl(0 72% 51%), hsl(0 72% 63%));

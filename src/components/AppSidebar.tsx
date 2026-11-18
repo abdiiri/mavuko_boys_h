@@ -41,8 +41,8 @@ export function AppSidebar() {
             <GraduationCap className="h-5 w-5 text-sidebar-primary-foreground" />
           </div>
           <div>
-            <h1 className="font-heading text-sm font-bold tracking-tight text-sidebar-foreground">Pumwani Boys</h1>
-            <p className="text-[11px] text-sidebar-muted font-body">Record Management</p>
+            <h1 className="font-heading text-sm font-bold tracking-tight text-sidebar-foreground">Mavuko Boys</h1>
+            <p className="text-[11px] text-sidebar-muted font-body">High School Records</p>
           </div>
         </div>
       </div>

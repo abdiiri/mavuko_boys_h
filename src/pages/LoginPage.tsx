@@ -41,7 +41,7 @@ export default function LoginPage() {
         <div className="w-full max-w-sm">
           <div className="mb-8">
             <h1 className="font-heading text-2xl font-bold text-foreground">
-              Pumwani Boys School
+              Mavuko Boys High School
             </h1>
             <p className="text-sm text-muted-foreground mt-1 font-body">
               Record Management System

@@ -55,7 +55,7 @@ export default function SetupPage() {
           </div>
           <div className="space-y-2">
             <Label>Email</Label>
-            <Input type="email" value={email} onChange={e => setEmail(e.target.value)} required placeholder="admin@pumwani.ac.ke" />
+            <Input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
           </div>
           <div className="space-y-2">
             <Label>Password</Label>
