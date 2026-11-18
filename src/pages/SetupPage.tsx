@@ -45,6 +45,7 @@ export default function SetupPage() {
     <div className="min-h-screen bg-background flex items-center justify-center px-8">
       <div className="w-full max-w-sm">
         <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Mavuko Boys High School</p>
           <h1 className="font-heading text-2xl font-bold text-foreground">Initial Setup</h1>
           <p className="text-sm text-muted-foreground mt-1 font-body">Create the first admin account</p>
         </div>
