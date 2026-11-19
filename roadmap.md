@@ -1,0 +1,2 @@
+- [x] Rebrand the school system as Mavuko Boys High School and refresh its existing colors.
+- [x] Change the favicon letter from P to M and verify it in the browser.
