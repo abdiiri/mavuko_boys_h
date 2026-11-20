@@ -65,9 +65,9 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchAll = useCallback(async () => {
+  const fetchAll = useCallback(async (silent = false) => {
     if (!isAuthenticated) return;
-    setLoading(true);
+    if (!silent) setLoading(true);
 
     const [studentsRes, attendanceRes, feesRes, announcementsRes] = await Promise.all([
       supabase.from('students').select('*'),
@@ -123,6 +123,19 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     fetchAll();
   }, [fetchAll]);
+
+  // Live updates: re-fetch quietly whenever any table changes in the database
+  useEffect(() => {
+    if (!isAuthenticated) return;
+    const channel = supabase
+      .channel('db-live-updates')
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'students' }, () => fetchAll(true))
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'attendance' }, () => fetchAll(true))
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'fees' }, () => fetchAll(true))
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'announcements' }, () => fetchAll(true))
+      .subscribe();
+    return () => { supabase.removeChannel(channel); };
+  }, [isAuthenticated, fetchAll]);
 
   const addStudent = async (s: { name: string; username: string; studentId: string; class: string; password: string }) => {
     const { data: sessionData } = await supabase.auth.getSession();
@@ -202,7 +215,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       students, attendance, fees, announcements, loading,
       addStudent, updateStudent, deleteStudent,
       setAttendance: setAttendanceRecord,
-      updateFee, refresh: fetchAll,
+      updateFee, refresh: () => fetchAll(),
     }}>
       {children}
     </DataContext.Provider>
